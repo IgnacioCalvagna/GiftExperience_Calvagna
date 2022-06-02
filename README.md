@@ -1,7 +1,5 @@
-# Getting Started with Create React App
 
-
-#Repositorio  Ignacio Calvagna - CoderHouse Comision #37750 ReactJs 
+<h1>Repositorio  Ignacio Calvagna - CoderHouse Comision #37750 ReactJs </h1>
 
 
 <br/>

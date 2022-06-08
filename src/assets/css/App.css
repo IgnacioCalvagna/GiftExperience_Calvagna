@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.miCard{
+  margin-top:10%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,51 +1,20 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import '../assets/css/card.css'
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
-
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Ejemplo
-      </Typography>
-      <Typography variant="h5" component="div">
-        De Card
-      </Typography>
-      
-      <Typography variant="body2">
-        con Material Ui
-        <br />
-        
-      </Typography>
-    </CardContent>
-      <CardActions>
-    <div className="cardButton">
-        <a href="https://mui.com/" target={"_blank"}>
-          {" "}
-          <Button  size="small">Learn More</Button>
-        </a>
-    </div>
-      </CardActions>
-  </React.Fragment>
-);
-
-export default function OutlinedCard() {
+import React from "react";
+import { Card,Button } from "react-bootstrap";
+const laCard = () => {
   return (
-    <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined">{card}</Card>
-    </Box>
+    <>
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            Esto es un ejemplo de card importado con React-Bootstrap 
+          </Card.Text>
+          <Button variant="success">ver mas </Button>
+        </Card.Body>
+      </Card>
+    </>
   );
-}
+};
+
+export default laCard;

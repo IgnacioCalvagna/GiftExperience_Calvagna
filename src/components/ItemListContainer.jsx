@@ -1,7 +1,7 @@
 import React from "react";
 import Card from '../common/Card'
 
-import Swal from "sweetalert";
+
 import '../assets/css/itemListContainer.css'
 const ItemListContainer = (props) => {
   const { nombre, apellido } = props;

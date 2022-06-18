@@ -1,22 +1,19 @@
 import "./assets/css/App.css";
-import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
+
+// import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
     <>
-      <div className="App">
+      <div className="App ALFO">
         <Navbar />
 
-        <ItemListContainer nombre={"ignacio"} apellido={'calvanga'} />
+        <ItemListContainer nombre={"Ignacio"} apellido={'Calvanga'} />
 
-        <Routes>
-          {/* <Route path={'/'} element={<Home/>} /> */}
-          <Route path="/aboutUs" element={<AboutUs />} />
-        </Routes>
+        
         <Footer />
       </div>
     </>

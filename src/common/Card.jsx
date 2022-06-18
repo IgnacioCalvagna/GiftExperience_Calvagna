@@ -1,7 +1,6 @@
 import { Card } from "react-bootstrap";
 import diaSpa from '../assets/img/diaSpa.jpeg'
 import ItemCount from "./ItemCount";
-import Swal from "sweetalert";
 const LaCard = ( { fakeData } ) => {
   
   

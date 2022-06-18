@@ -10,7 +10,7 @@ const Navbarr = () => {
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand >
             <img
               alt=""
               src={logito}
@@ -28,18 +28,18 @@ const Navbarr = () => {
             
               <Nav.Link ><NavLink to='/'> Home</NavLink></Nav.Link>
                <Nav.Link><NavLink to='/aboutUs'> About us</NavLink></Nav.Link>
-              <Nav.Link href="#">Products</Nav.Link>
+              <Nav.Link >Products</Nav.Link>
             </Nav>
             <Nav>
                 {/* Punto 1 de la actividad de componentes I */}
 
-              <Nav.Link href="#">
+              <Nav.Link >
                 <CardWidget />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>{" "}
+      </Navbar>
     </>
   );
 };

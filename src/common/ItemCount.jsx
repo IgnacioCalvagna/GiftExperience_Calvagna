@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert";
 import '../assets/css/itemCount.css'
@@ -6,8 +6,10 @@ import '../assets/css/itemCount.css'
 const ItemCount = ({ fakeData,stock,initial }) => {
   
  const [cantArt, setCantArt] = useState(initial);
-  const [miStock, setMiStock] = useState(stock) 
-const tot = cantArt*fakeData.price
+  
+ // const [miStock, setMiStock] = useState(stock) 
+
+
  console.log("mis stock", stock)
   const handleMas=()=>{
     if(stock<1)return Swal("No hay stock")
@@ -21,17 +23,12 @@ const tot = cantArt*fakeData.price
   }
 
 
-  useEffect(() => {
-    if(stock<1) {
-      initial=stock
-    } 
-
-  }, [])
   
 
 
 
   const onAdd =()=>{
+    const tot = cantArt*fakeData.price
     Swal(`Item agregado al carrito \n\n ${fakeData.producto} x ${cantArt}\n\n Total $${tot} `)
   }
 

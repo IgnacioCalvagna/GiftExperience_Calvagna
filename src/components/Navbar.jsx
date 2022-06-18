@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/navbar.css";
 import CardWidget from "./CardWidget";
+import { NavLink } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logito from "../logo.svg";
 
@@ -25,11 +26,13 @@ const Navbarr = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
             
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#">About us</Nav.Link>
+              <Nav.Link ><NavLink to='/'> Home</NavLink></Nav.Link>
+               <Nav.Link><NavLink to='/aboutUs'> About us</NavLink></Nav.Link>
               <Nav.Link href="#">Products</Nav.Link>
             </Nav>
             <Nav>
+                {/* Punto 1 de la actividad de componentes I */}
+
               <Nav.Link href="#">
                 <CardWidget />
               </Nav.Link>

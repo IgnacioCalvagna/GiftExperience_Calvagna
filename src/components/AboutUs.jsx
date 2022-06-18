@@ -2,9 +2,8 @@
 
 const AboutUs = () => {
   return (
-    <div>AboutUs
-        
-
+    <div>
+      AboutUs
     </div>
   )
 }

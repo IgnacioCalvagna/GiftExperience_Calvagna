@@ -1,0 +1,33 @@
+{
+    "productos": [
+     
+      {
+        "id": 1,
+        "producto": "Sativa & Co",
+        "desc": "./Users/ignaciocalvagna/porro420/portfolio/portfolio/src/assets/img/inWorking.jpg",
+        "price": 10000,
+        "stock":10
+      },
+      {
+        "id": 2,
+        "titulo": "Imas flight",
+        "img": ["./assets/img/inWorking.jpg"],
+        "description": "Desarrollo pensado para una empresa aeronautica privada "
+      },
+      {
+        "id": 3,
+        "titulo": "Satindica",
+        "img": ["./assets/img/inWorking.jpg"],
+        "description": "Pagina desarrollada para Satindica PERN"
+      },
+      {
+        "id": 4,
+        "titulo": "Satindica",
+        "img": ["./assets/img/inWorking.jpg"],
+        "description": "Pagina desarrollada para Satindica PERN"
+      }
+      
+    ]
+  }
+  
+

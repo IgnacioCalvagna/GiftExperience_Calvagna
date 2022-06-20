@@ -8,13 +8,16 @@ import ItemListContainer from "./components/ItemListContainer";
 function App() {
   return (
     <>
-      <div className="App ALFO">
         <Navbar />
+      <div >
 
-        <ItemListContainer nombre={"Ignacio"} apellido={'Calvanga'} />
+        <div className="misItems">
+          <ItemListContainer nombre={"Ignacio"} apellido={'Calvanga'} />
+        </div>
+
 
         
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

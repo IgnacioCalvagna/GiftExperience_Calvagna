@@ -1,25 +1,41 @@
-import React from "react";
-import Card from '../common/Card'
+import React, { useEffect, useState } from "react";
+import ItemList from "./ItemList";
+import fakeData from "../products.json";
+import "../assets/css/itemListContainer.css";
+import Loading from "../common/Loading";
 
-
-import '../assets/css/itemListContainer.css'
 const ItemListContainer = (props) => {
   const { nombre, apellido } = props;
-  const fakeData = { id: 1, producto: "Día de spa",desc:"Ideal para hacerce un auto regalo o regalarselo a esa persona que tanto queres ", price: 3420.73,stock: 10 };
+  const productos = fakeData.productos;
 
-  
+  const [productList, setProductList] = useState([]);
+  const [loading,setLoading] = useState(true)
+
+
+  useEffect(() => {
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productos);
+      }, 3000);
+    }).then((resolve) => {
+      setProductList(resolve);
+      setLoading(false)
+    });
+  }, []);
+
+  console.log(productList);
+
   return (
     <>
-      <h2>
+      <h2 className="mih2">
         ItemListContainer hecho por {nombre} {apellido}
-
       </h2>
-        
-
-        <div className="miCard">
-          <Card fakeData={fakeData} />
-        </div>
-        
+      {
+        loading? <div className="load"> <Loading/></div> :
+      <div className="productosList">
+        <ItemList productList={productList} />
+      </div>
+      }
     </>
   );
 };

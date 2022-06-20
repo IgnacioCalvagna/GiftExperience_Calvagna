@@ -1,28 +1,34 @@
 import { Card } from "react-bootstrap";
-import diaSpa from '../assets/img/diaSpa.jpeg'
 import ItemCount from "./ItemCount";
-const LaCard = ( { fakeData } ) => {
+import '../assets/css/card.css'
+
+const LaCard = ( {  item,foto } ) => {
   
   
+
 
 
   return (
     <div className="miCard">
       <Card style={{ width: "18rem" , margin:'0 auto' }}>
-        <Card.Img variant="top" src={diaSpa} width={'45%'} />
+        <Card.Img variant="top" src={foto} width={'45%'} />
         <Card.Body>
-          <Card.Title>{fakeData.producto}</Card.Title>
+          <Card.Title>{item.producto}</Card.Title>
           <Card.Text>
-            {fakeData.desc}
+            {item.desc}
           </Card.Text>
           <Card.Text>
-            Valor ${fakeData.price}
+            Valor ${item.price}
           </Card.Text>
           
-          <ItemCount fakeData={fakeData} stock={fakeData.stock} initial={1} />
+          <div className="botonera">
+          <ItemCount item={item} stock={item.stock} initial={1} />
+          </div>
+          
          
         </Card.Body>
       </Card>
+      
     </div>
   );
 };

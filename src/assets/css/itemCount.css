@@ -1,7 +1,11 @@
 .botonera{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    justify-content: space-around;
     
-    
+    margin: 5%;
     margin-bottom: 8%;
+}
+.botonAdd{
+    text-align: center;
+    justify-content: space-evenly;
 }

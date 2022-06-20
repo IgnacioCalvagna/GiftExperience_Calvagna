@@ -1,4 +1,21 @@
 .miCard{
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 5%;
     margin-bottom: 10%;
+}
+
+.mih2{
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.productsList{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.load{
+    text-align: center;
 }

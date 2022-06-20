@@ -5,7 +5,7 @@ const Footer = () => {
     <div className='elFooter'>
       <hr />
 
-        <h1>Soy el footer madafakas</h1>
+        <h1>Soy el footer</h1>
     
     </div>
   )

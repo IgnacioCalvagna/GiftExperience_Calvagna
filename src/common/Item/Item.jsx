@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
-import ItemCount from "./ItemCount";
-import '../assets/css/card.css'
+import ItemCount from "../ItemCount/ItemCount";
+import './item.css'
 
 const LaCard = ( {  item,foto } ) => {
   

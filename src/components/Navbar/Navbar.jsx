@@ -1,9 +1,9 @@
 import React from "react";
-import "../assets/css/navbar.css";
-import CardWidget from "./CardWidget";
+import './navbar.css'
+import CardWidget from "../CardWidget/CardWidget";
 // import { NavLink } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logito from "../logo.svg";
+import logito from "../../logo.svg";
 
 const Navbarr = () => {
   return (

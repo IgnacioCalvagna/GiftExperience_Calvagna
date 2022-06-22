@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert";
-import "../assets/css/itemCount.css";
+import "./itemCount.css";
 
 const ItemCount = ({ item, stock, initial }) => {
   const [cantArt, setCantArt] = useState(initial);

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/footer.css'
+import './footer.css'
 const Footer = () => {
   return (
     <div className='elFooter'>

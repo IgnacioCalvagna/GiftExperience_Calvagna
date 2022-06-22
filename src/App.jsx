@@ -1,9 +1,12 @@
 import "./assets/css/App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ItemListContainer from "./components/ItemListContainer";
-
+import Navbar from './components/Navbar/Navbar.jsx';
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import AboutUs from "./components/AboutUs";
+// import Footer from "./components/Footer/Footer";
+
+
+// import FetchApi from "./clases/claseFetch/CatsContainer";
+
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
         <Navbar />
       <div >
 
+        {/* <FetchApi/> */}
         <div className="misItems">
           <ItemListContainer nombre={"Ignacio"} apellido={'Calvanga'} />
         </div>

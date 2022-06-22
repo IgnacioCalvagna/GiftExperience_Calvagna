@@ -1,0 +1,11 @@
+.items{
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+@media (max-width: 700px) {
+    .items{
+        display: block;
+    }
+}

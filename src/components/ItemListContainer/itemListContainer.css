@@ -13,9 +13,13 @@
 
 .productsList{
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
 }
 
 .load{
     text-align: center;
+}
+.algo{
+    width: 100%;
 }

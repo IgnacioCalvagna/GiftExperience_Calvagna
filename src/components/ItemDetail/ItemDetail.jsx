@@ -2,10 +2,7 @@ import React from "react";
 import "./itemDetail.css";
 import ItemCount from "../../common/ItemCount/ItemCount";
 import CarouselDetails from "../CarouselDetails/CarouselDetails";
-const ItemDetail = ( {   product } ) => {
-
-
-
+const ItemDetail = ({ product }) => {
   return (
     <div className="container">
       <div className="ItemDetail">
@@ -23,8 +20,16 @@ const ItemDetail = ( {   product } ) => {
             <h3>{product.producto}</h3>
             <strong>Descipcion</strong> <br />
             <p>{product.desc}</p>
-            <strong>Precio</strong> <br />
-            <p>${product.price}</p>
+            <div className="flex">
+              <div>
+                <strong>Precio</strong> <br />
+                <p>${product.price}</p>
+              </div>
+              <div>
+                <strong>Categoría</strong> <br />
+                <p>{product.categoria}</p>
+              </div>
+            </div>
             <div className="elItem">
               <ItemCount item={product} stock={product.stock} initial={1} />
             </div>

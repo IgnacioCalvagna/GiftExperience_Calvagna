@@ -1,10 +1,9 @@
 .items{
-    display: flex;
-    
-    justify-content: space-around;
+    width:100%;
+    display:flex; 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .items{
         display: block;
     }

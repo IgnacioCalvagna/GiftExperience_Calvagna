@@ -1,0 +1,28 @@
+.ItemDetail{
+    margin:0 auto;
+}
+.detail{
+    display:flex;
+    
+}
+.descProd{
+    margin-left: 5%;
+}
+.elItem{
+    text-align: center;
+}
+.miImg{
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .detail{
+        display:block;
+    }
+    .miImg{
+        width: 100%;
+        text-align: center;
+    }
+    
+}

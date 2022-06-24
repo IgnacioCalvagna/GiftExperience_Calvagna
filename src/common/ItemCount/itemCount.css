@@ -1,11 +1,15 @@
 .botonera{
     /* display: flex; */
     justify-content: space-around;
-    
+    margin-top:4%;
     margin: 5%;
-    margin-bottom: 8%;
+    margin-bottom: 2%;
 }
 .botonAdd{
     text-align: center;
     justify-content: space-evenly;
+}
+.miBtn{
+    margin-left: 2%;
+    margin-right: 2%;
 }

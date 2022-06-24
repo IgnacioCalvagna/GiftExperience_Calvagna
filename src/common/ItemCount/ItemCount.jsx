@@ -23,22 +23,22 @@ const ItemCount = ({ item, stock, initial }) => {
   const onAdd = () => {
     const tot = cantArt * item.price;
     Swal(
-      `Item agregado al carrito:  ${item.producto} \nCantidad: ${cantArt}\nTotal $${item.price*cantArt}`
+      `Item agregado al carrito:  ${item.producto} \nCantidad: ${cantArt}\nTotal $${tot}`
     );
   };
 
   return (
     <>
       <div className="botonera">
-        <Button variant="outline-primary" onClick={handleMenos}>
+        <Button className="miBtn"  variant="outline-primary" onClick={handleMenos}>
           -
         </Button>
 
-        <Button className="btn " disabled>
+        <Button className="btn miBtn " disabled>
           {cantArt}
         </Button>
 
-        <Button variant="outline-primary" onClick={handleMas}>
+        <Button className="miBtn" variant="outline-primary" onClick={handleMas}>
           +
         </Button>
 
@@ -46,11 +46,12 @@ const ItemCount = ({ item, stock, initial }) => {
       </div>
 
 
-
-
+    
       <Button variant="outline-primary" onClick={onAdd}>
         Agregar al carrito
-      </Button>
+      </Button><br />
+      <Button variant='primary'opacity={0.2}> Comprar  ahora  </Button>
+     
     </>
   );
 };

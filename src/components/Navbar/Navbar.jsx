@@ -1,14 +1,14 @@
 import React from "react";
 import './navbar.css'
 import CardWidget from "../CardWidget/CardWidget";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logito from "../../logo.svg";
 
 const Navbarr = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar className="navbar" bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand >
             <img
@@ -26,8 +26,8 @@ const Navbarr = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
             
-              <Nav.Link >{/* <NavLink to='/'> */} Home{/* </NavLink> */}</Nav.Link>
-               <Nav.Link>{/* <NavLink to='/aboutUs'> */} About us{/* </NavLink> */}</Nav.Link>
+              <Nav.Link ><NavLink to='/'> Home</NavLink></Nav.Link>
+               <Nav.Link><NavLink to='/aboutUs'> About us</NavLink></Nav.Link>
               <Nav.Link >Products</Nav.Link>
             </Nav>
             <Nav>

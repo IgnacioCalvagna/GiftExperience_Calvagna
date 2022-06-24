@@ -1,16 +1,16 @@
 import React from "react";
-import './navbar.css'
+import "./navbar.css";
 import CardWidget from "../CardWidget/CardWidget";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logito from "../../logo.svg";
 
 const Navbarr = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar className="navbar" bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand >
+          <Navbar.Brand>
             <img
               alt=""
               src={logito}
@@ -20,20 +20,23 @@ const Navbarr = () => {
             />{" "}
           </Navbar.Brand>
           <Nav>
-          <Nav.Link> Coder Gift</Nav.Link>
+            <Nav.Link> Coder Gift</Nav.Link>
           </Nav>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            
-              <Nav.Link >{/* <NavLink to='/'> */} Home{/* </NavLink> */}</Nav.Link>
-               <Nav.Link>{/* <NavLink to='/aboutUs'> */} About us{/* </NavLink> */}</Nav.Link>
-              <Nav.Link >Products</Nav.Link>
+              <Nav.Link>
+                <NavLink to='/'> Home</NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink to='/aboutUs'> About us</NavLink>
+              </Nav.Link>
+              <Nav.Link>Products</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link >
+              <Nav.Item>
                 <CardWidget />
-              </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>

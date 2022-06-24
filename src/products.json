@@ -6,7 +6,9 @@
         "producto": "Día de spa",
         "desc":"Ideal para hacerce un auto regalo o regalarselo a esa persona que tanto queres ",
         "price": 12000,
-        "stock":10
+        "stock":10,
+        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULQ5arXI5QNU4oV9ebwQTPqTylRAxbGXRBw&usqp=CAU"],
+        "categoria":"relax"
         
       },
       {
@@ -14,7 +16,9 @@
         "producto": "Salto en paracaidas",
         "desc": "A 40 Km de capital federal en la ciudad de lobos  podes vivir una experiencia unica desde el aire ",
         "price": 15000,
-        "stock":3
+        "stock":3,
+        "img":["https://upload.wikimedia.org/wikipedia/commons/0/09/Tandem_Skydive.jpg"],
+        "categoria":"extremo"
         
       },
       {
@@ -22,17 +26,23 @@
         "producto": "Recorrido guiado de Museos",
         "desc": "Te invitamos a hacer este recorrido por puntos hist ",
         "price": 10000,
-        "stock":5
+        "stock":5,
+        "img":["https://www.clarin.com/img/2021/01/20/el-museo-de-arte-tigre___7bM_dukFV_1200x630__1.jpg"],
+        "categoria":"cultura"
       },
       {
         "id": 4,
         "producto": "Recorrido de Bares",
         "desc": "Veni a pasar una noche recorriendo los mejores bares ",
         "price": 50000,
-        "stock":0
+        "stock":50,
+        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1yACxQsRSyfm8zvWh0wUrQ5rMnazFrUtdxg&usqp=CAU"],
+        "categoria":"nocturno"
       }
       
     ]
   }
+
+  
   
 

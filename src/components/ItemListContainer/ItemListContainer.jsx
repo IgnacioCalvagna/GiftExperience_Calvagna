@@ -5,18 +5,20 @@ import "./itemListContainer.css";
 import Loading from "../../common/Loading/Loading";
 
 const ItemListContainer = (props) => {
-  const { nombre, apellido } = props;
-  const productos = fakeData.productos;
+  // const { nombre, apellido } = props;
+  
 
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const productos = fakeData.productos;
     new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(productos);
       }, 2000);
-    }).then((resolve) => {
+    })
+    .then((resolve) => {
       setProductList(resolve);
       setLoading(false);
     });
@@ -25,17 +27,20 @@ const ItemListContainer = (props) => {
   return (
     <>
       <h2 className="mih2">
-        ItemListContainer hecho por {nombre} {apellido}
+        {/* ItemListContainer hecho por {nombre} {apellido} */}
+        <h3>Gift Experience App</h3>
       </h2>
-      <div className="algo">
+
+      <div >
         {loading ? (
           <div className="load">
             {" "}
             <Loading />
           </div>
         ) : (
-          <div className="productosList">
-            <ItemList productList={productList} />
+          <div >
+
+            <ItemList productList={productList} className="productsList" />
           </div>
         )}
       </div>

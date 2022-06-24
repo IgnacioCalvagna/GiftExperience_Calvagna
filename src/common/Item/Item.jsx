@@ -1,17 +1,18 @@
 import { Card } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import './item.css'
-
-const LaCard = ( {  item,foto } ) => {
+import { Link, useParams } from "react-router-dom";
+const LaCard = ( {  item } ) => {
   
   
+  const {id} = useParams()
 
 
 
   return (
     <div className="miCard">
       <Card style={{ width: "18rem" , margin:'0 auto' }}>
-        <Card.Img variant="top" src={foto} width={'45%'} />
+      <Link to={`/item/${id}`} >  <Card.Img variant="top" src={item.img[0]?item.img[0]:null} width={'15%'} /></Link>
         <Card.Body>
           <Card.Title>{item.producto}</Card.Title>
           <Card.Text>

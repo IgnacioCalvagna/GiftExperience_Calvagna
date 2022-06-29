@@ -6,9 +6,6 @@ import "./itemCount.css";
 const ItemCount = ({ item, stock, initial }) => {
   const [cantArt, setCantArt] = useState(initial);
 
-  // const [miStock, setMiStock] = useState(stock)
-
-  
   const handleMas = () => {
     if (stock < 1) return Swal("No hay stock");
     if (cantArt >= stock) return Swal("No hay suficiente stock para tu pedido");
@@ -20,8 +17,8 @@ const ItemCount = ({ item, stock, initial }) => {
     setCantArt(cantArt - 1);
   };
 
+  const tot = cantArt * item.price;
   const onAdd = () => {
-    const tot = cantArt * item.price;
     Swal(
       `Item agregado al carrito:  ${item.producto} \nCantidad: ${cantArt}\nTotal $${tot}`
     );
@@ -30,7 +27,11 @@ const ItemCount = ({ item, stock, initial }) => {
   return (
     <>
       <div className="botonera">
-        <Button className="miBtn"  variant="outline-primary" onClick={handleMenos}>
+        <Button
+          className="miBtn"
+          variant="outline-primary"
+          onClick={handleMenos}
+        >
           -
         </Button>
 
@@ -41,17 +42,17 @@ const ItemCount = ({ item, stock, initial }) => {
         <Button className="miBtn" variant="outline-primary" onClick={handleMas}>
           +
         </Button>
-
-        
+        <div className="btnAbajito">
+          <Button variant="outline-primary" onClick={onAdd}>
+            Agregar al carrito
+          </Button>
+          <br />
+          <Button variant="primary" opacity={0.2}>
+            {" "}
+            Comprar ahora{" "}
+          </Button>
+        </div>
       </div>
-
-
-    
-      <Button variant="outline-primary" onClick={onAdd}>
-        Agregar al carrito
-      </Button><br />
-      <Button variant='primary'opacity={0.2}> Comprar  ahora  </Button>
-     
     </>
   );
 };

@@ -1,25 +1,32 @@
-.ItemDetail{
-    margin:0 auto;
-}
-.detail{
-    display:flex;
+.itemDetail{
+    margin-top: 10%;
     
+    display:flex;
 }
+
 .descProd{
     margin-left: 5%;
+    width: 60%;
+    
 }
 .elItem{
     text-align: center;
-}
-.miImg{
-    /* margin: 0 auto; */
-    text-align: center;
-}
-.flex{
-    display: flex;
-    justify-content: space-around
     
 }
+.count{
+    float: right;
+    margin-top:15%;
+    margin-right:50%;
+}
+.miImg{
+    width: 50%;
+    
+    margin-left:5;
+}
+.btnAbajito{
+    margin-top:15%;
+}
+
 
 @media (max-width: 1000px) {
     .detail{

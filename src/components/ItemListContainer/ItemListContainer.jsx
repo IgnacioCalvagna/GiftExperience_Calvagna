@@ -3,45 +3,55 @@ import ItemList from "../ItemList/ItemList";
 import fakeData from "../../products.json";
 import "./itemListContainer.css";
 import Loading from "../../common/Loading/Loading";
+import { useParams } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 const ItemListContainer = (props) => {
-  // const { nombre, apellido } = props;
-  
-
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { categoria } = useParams();
 
   useEffect(() => {
-    const productos = fakeData.productos;
+    let productos = fakeData.productos;
     new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(productos);
       }, 2000);
-    })
-    .then((resolve) => {
-      setProductList(resolve);
+    }).then((resolve) => {
+      if (!categoria) {
+        setProductList(resolve);
+      } else {
+        resolve = productos.filter(
+          (product) => product.categoria === categoria
+        );
+        
+        setProductList(resolve);
+      }
       setLoading(false);
     });
-  }, []);
+  }, [categoria]);
 
   return (
     <>
-      <h2 className="mih2">
-        {/* ItemListContainer hecho por {nombre} {apellido} */}
-        <h3>Gift Experience App</h3>
-      </h2>
+      
+        <h3 className="mih2">Gift Experience App</h3>
+      
 
-      <div >
+      <div>
         {loading ? (
           <div className="load">
             {" "}
             <Loading />
           </div>
         ) : (
-          <div >
+          <Container>
+            
+        
 
-            <ItemList productList={productList} className="productsList" />
-          </div>
+              <ItemList productList={productList} className="productsList" />
+              
+            
+          </Container>
         )}
       </div>
     </>

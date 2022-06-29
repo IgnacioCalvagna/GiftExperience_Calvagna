@@ -8,10 +8,12 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 // import FetchApi from "./clases/claseFetch/CatsContainer";
 
+
 function App() {
   return (
     <>
       <Navbar />
+      
       <div>
         <Routes>
           <Route path={"/"} element={<ItemListContainer />} />

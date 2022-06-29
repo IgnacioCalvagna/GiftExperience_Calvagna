@@ -1,10 +1,10 @@
-.items{
-    width:100%;
-    display:flex; 
+
+.item{
+    margin-bottom:5%
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .items{
-        display: block;
+     
     }
-}
+} */

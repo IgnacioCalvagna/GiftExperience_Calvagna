@@ -1,8 +1,8 @@
 import "./assets/css/App.css";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import ItemDetailContainer from "./components/ItemDetailsContainer/ItemDetailContainer";
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import AboutUs from "./components/AboutUs/AboutUs";
 // import Footer from "./components/Footer/Footer";
 
@@ -13,21 +13,13 @@ function App() {
     <>
       <Navbar />
       <div>
-        {/* <FetchApi/> */}
-        {/* <div>
-          <ItemListContainer nombre={"Ignacio"} apellido={'Calvanga'} />
-        </div> */}
-
-        
-        <ItemDetailContainer />
-        {/* <Routes>
+        <Routes>
           <Route path={"/"} element={<ItemListContainer />} />
+          <Route path={"/category/:categoria"} element={<ItemListContainer />} /> 
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-        </Routes> */}
-        {/* <Route path={'/category/:id'} element={<ItemListContainer/>} />
-         */}
-        {/* <Route path={'/aboutUs'} element={<AboutUs/>} /> */}
-        {/* <Footer /> */}
+        </Routes>
+
+        {/* <FetchApi/> */}
       </div>
     </>
   );

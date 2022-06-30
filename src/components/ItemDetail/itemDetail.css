@@ -29,12 +29,28 @@
 
 
 @media (max-width: 1000px) {
-    .detail{
+    .itemDetail{
         display:block;
     }
+    /* .detail{
+        display:block;
+    } */
     .miImg{
         width: 100%;
         text-align: center;
     }
-    
+    .descProd{
+        margin-top:5%;
+        width: 90%;
+        
+    }
+    .miImg{
+        width: 100%;
+        
+        
+    }
+    .count{
+        width: 100%;
+      margin: 0 auto;
+    }
 }

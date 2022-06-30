@@ -7,11 +7,11 @@ const ItemDetail = ({ product }) => {
     <>
       <div className="container itemDetail">
         <div className="miImg">
+          <h1>{product.producto}</h1>
           <img src={product.img[0]} width={"100%"} alt="" />
         </div>
 
         <div className="descProd">
-          <h1>{product.producto}</h1>
           <p>{product.desc}</p>
 
           <p>$ {product.price}</p>

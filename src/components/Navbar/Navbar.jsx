@@ -27,10 +27,10 @@ const Navbarr = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse>
         <Nav className="me-auto">
           <CardWidget />
         </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

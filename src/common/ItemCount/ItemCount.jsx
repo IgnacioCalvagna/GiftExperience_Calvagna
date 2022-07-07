@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert";
 import "./itemCount.css";
 
-const ItemCount = ({ item, stock, initial,cant,setCant,tot,setTot,onAdd }) => {
+const ItemCount = ({ item, stock, initial, onAdd }) => {
+  const [cant, setCant] = useState(initial);
   
 
   const handleMas = () => {
@@ -17,14 +19,7 @@ const ItemCount = ({ item, stock, initial,cant,setCant,tot,setTot,onAdd }) => {
     setCant(cant - 1);
   };
 
-  const totalito = cant * item.price;
-  setTot(totalito)
-
- /*  const onAdd = () => {
-    Swal(
-      `Item agregado al carrito:  ${item.producto} \nCantidad: ${cantArt}\nTotal $${tot}`
-    );
-  }; */
+  
 
   return (
     <>
@@ -44,15 +39,19 @@ const ItemCount = ({ item, stock, initial,cant,setCant,tot,setTot,onAdd }) => {
         <Button className="miBtn" variant="outline-primary" onClick={handleMas}>
           +
         </Button>
+
         <div className="btnAbajito">
-          <Button variant="outline-primary" onClick={onAdd}>
+          <Button variant="outline-primary" onClick={() => onAdd(cant)}>
             Agregar al carrito
           </Button>
           <br />
+
+          <Link to='/cart'>
           <Button variant="primary" opacity={0.2}>
             {" "}
             Comprar ahora{" "}
           </Button>
+          </Link>
         </div>
       </div>
     </>

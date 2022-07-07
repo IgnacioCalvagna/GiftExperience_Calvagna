@@ -1,0 +1,15 @@
+.noHayProd{
+    margin:0 auto;
+    margin-top:15%;
+    justify-content:center;
+    text-align: center;
+}
+.circle{
+    width:300px;
+    height:300px;
+    
+    border-radius:1000px;
+    background-color: rgb(247, 20, 58);
+    text-align: center;
+    border: none;
+}

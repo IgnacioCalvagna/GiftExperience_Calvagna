@@ -1,92 +1,96 @@
 {
-    "productos": [
-     
-      {
-        "id": 0,
-        "producto": "Día de spa",
-        "desc":"Ideal para hacerce un auto regalo o regalarselo a esa persona que tanto queres ",
-        "price": 12000,
-        "stock":10,
-        
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA1B7fT-id2IpA1expEeU615LguNCtREEaLChS0ontZNltAigQ5YcikfpG9TGNH8mu4Zk&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULQ5arXI5QNU4oV9ebwQTPqTylRAxbGXRBw&usqp=CAU"],
-        "categoria":"relax"
-        
-      },
-      {
-        "id": 1,
-        "producto": "Salto en paracaidas",
-        "desc": "A 40 Km de capital federal en la ciudad de lobos  podes vivir una experiencia unica desde el aire.Salto tandem en paracaídas. Caída desde 3000 metros aproximadamente, con instructor y todos los complementos de seguridad necesarios. Video y fotos handycam. ",
-        "price": 15000,
-        "stock":3,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzlAOogsW0s_C9zHYhsiGu0UZEsVWtpCyW7Q&usqp=CAU", "https://upload.wikimedia.org/wikipedia/commons/0/09/Tandem_Skydive.jpg"],
-        "categoria":"extremo-aereo"
-        
-      },
-      {
-        "id": 2,
-        "producto": "Recorrido Museos",
-        "desc": "Te invitamos a hacer este recorrido por puntos hist ",
-        "price": 10000,
-        "stock":5,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9FDBZmgClfhfH1r6LCvs3dmqPcjRDBHc8Q&usqp=CAU", "https://www.clarin.com/img/2021/01/20/el-museo-de-arte-tigre___7bM_dukFV_1200x630__1.jpg"],
-        "categoria":"cultura"
-      },
-      {
-        "id": 3,
-        "producto": "Recorrido de Bares",
-        "desc": "Veni a pasar una noche recorriendo los mejores bares ",
-        "price": 50000,
-        "stock":50,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1yACxQsRSyfm8zvWh0wUrQ5rMnazFrUtdxg&usqp=CAU"],
-        "categoria":"barGourmet"
-      },
-      {
-        "id": 4,
-        "producto": "Salto bungee",
-        "desc": "  El Bungee Jumping es una actividad que toda persona debe hacer al menos una vez en la vida. Es una experiencia magnifica en la cual se libera adrenalina, se siente el placer de volar por un instante y la libertad absoluta durante la caída libre.",
-        "price": 8000,
-        "stock":150,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7xsd-ytgIxVan31jSuwSO-f6tQbChdpfDw&usqp=CAU"],
-        "categoria":"extremo-aereo"
-      },
-      {
-        "id": 5,
-        "producto": "Recorrido de viniedo",
-        "desc": "Regala o regalate una almuerzo / cena unica para dos, en el corazon Mendoza, podes venir a cenar al viniedo saracatunga, ideal para venir en pareja y disfrutar de un momento diferente recorriendo el viniedo mas grande de argentina.",
-        "price": 8000,
-        "stock":150,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_qSilWH2WKAoEMzhuWoAMWW4czHf_3amFg&usqp=CAU"],
-        "categoria":"barGourmet"
-        
-      },
-      {
-        "id": 6,
-        "producto": "Vuelo de bautismo",
-        "desc": "Te invitamos a sobrevolar capital federal diurno/nocturno ",
-        "price": 8000,
-        "stock":150,
-        "img":["https://www.brasileirosemushuaia.com.br/media/catalog/product/cache/3/image/700x460/17f82f742ffe127f42dca9de82fb58b1/6/_/6_2_7.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7xsd-ytgIxVan31jSuwSO-f6tQbChdpfDw&usqp=CAU"],
-        "categoria":"extremo-aereo"
-      },
-      {
-        "id": 7,
-        "producto": "Dia all access parque de la costa ",
-        "desc": "Podes vivir la experiencia de recorrer el parque de la costa con acceso a TODAS las atracciones, Acuafun",
-        "price": 8000,
-        "stock":150,
-        "img":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXtq80BRTEVzHwVux_AJzeKj_Zes-BoM77w&usqp=CAU"],
-        "categoria":"extremo"
-      }
-      
-      
-      
-      
-    ]
-  }
+  "productos": [
+    {
+      "id": 0,
+      "producto": "Día de spa",
+      "desc": "Ideal para hacerce un auto regalo o regalarselo a esa persona que tanto queres ",
+      "price": 12000,
+      "stock": 10,
 
-  
-  
-
-
-
-
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA1B7fT-id2IpA1expEeU615LguNCtREEaLChS0ontZNltAigQ5YcikfpG9TGNH8mu4Zk&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULQ5arXI5QNU4oV9ebwQTPqTylRAxbGXRBw&usqp=CAU"
+      ],
+      "categoria": "relax"
+    },
+    {
+      "id": 1,
+      "producto": "Salto en paracaidas",
+      "desc": "A 40 Km de capital federal en la ciudad de lobos  podes vivir una experiencia unica desde el aire.Salto tandem en paracaídas. Caída desde 3000 metros aproximadamente, con instructor y todos los complementos de seguridad necesarios. Video y fotos handycam. ",
+      "price": 15000,
+      "stock": 3,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzlAOogsW0s_C9zHYhsiGu0UZEsVWtpCyW7Q&usqp=CAU",
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Tandem_Skydive.jpg"
+      ],
+      "categoria": "extremo-aereo"
+    },
+    {
+      "id": 2,
+      "producto": "Recorrido Museos",
+      "desc": "Te invitamos a hacer este recorrido por puntos hist ",
+      "price": 10000,
+      "stock": 5,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9FDBZmgClfhfH1r6LCvs3dmqPcjRDBHc8Q&usqp=CAU",
+        "https://www.clarin.com/img/2021/01/20/el-museo-de-arte-tigre___7bM_dukFV_1200x630__1.jpg"
+      ],
+      "categoria": "cultura"
+    },
+    {
+      "id": 3,
+      "producto": "Recorrido de Bares",
+      "desc": "Veni a pasar una noche recorriendo los mejores bares ",
+      "price": 50000,
+      "stock": 50,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1yACxQsRSyfm8zvWh0wUrQ5rMnazFrUtdxg&usqp=CAU"
+      ],
+      "categoria": "barGourmet"
+    },
+    {
+      "id": 4,
+      "producto": "Salto bungee",
+      "desc": "  El Bungee Jumping es una actividad que toda persona debe hacer al menos una vez en la vida. Es una experiencia magnifica en la cual se libera adrenalina, se siente el placer de volar por un instante y la libertad absoluta durante la caída libre.",
+      "price": 8000,
+      "stock": 150,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7xsd-ytgIxVan31jSuwSO-f6tQbChdpfDw&usqp=CAU"
+      ],
+      "categoria": "extremo-aereo"
+    },
+    {
+      "id": 5,
+      "producto": "Recorrido de viniedo",
+      "desc": "Regala o regalate una almuerzo / cena unica para dos, en el corazon Mendoza, podes venir a cenar al viniedo saracatunga, ideal para venir en pareja y disfrutar de un momento diferente recorriendo el viniedo mas grande de argentina.",
+      "price": 8000,
+      "stock": 150,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_qSilWH2WKAoEMzhuWoAMWW4czHf_3amFg&usqp=CAU"
+      ],
+      "categoria": "barGourmet"
+    },
+    {
+      "id": 6,
+      "producto": "Vuelo de bautismo",
+      "desc": "Te invitamos a sobrevolar capital federal diurno/nocturno ",
+      "price": 8000,
+      "stock": 150,
+      "img": [
+        "https://www.brasileirosemushuaia.com.br/media/catalog/product/cache/3/image/700x460/17f82f742ffe127f42dca9de82fb58b1/6/_/6_2_7.jpg"
+      ],
+      "categoria": "extremo-aereo"
+    },
+    {
+      "id": 7,
+      "producto": "Dia all access parque de la costa ",
+      "desc": "Podes vivir la experiencia de recorrer el parque de la costa con acceso a TODAS las atracciones, Acuafun",
+      "price": 8000,
+      "stock": 150,
+      "img": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXtq80BRTEVzHwVux_AJzeKj_Zes-BoM77w&usqp=CAU"
+      ],
+      "categoria": "extremo"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
       setTimeout(() => {
         
         resolve(miProducto);
-      }, 2000);
+      }, 2);
     }).then((resolve) => {
       setProduct(resolve);
       setLoading(false);

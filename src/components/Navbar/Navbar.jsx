@@ -1,39 +1,56 @@
-import React from "react";
+import React /* , { useContext } */ from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import './navbar.css'
+import "./navbar.css";
 import CardWidget from "../CardWidget/CardWidget";
+import { Link } from "react-router-dom";
+// import { myContext } from "../../contexts/themeContext";
 
 const Navbarr = () => {
+  // const { darkMode, setDarkMode } = useContext(myContext);
+
+  // const handleChangeTheme = () => {
+  //   darkMode ? setDarkMode(false) : setDarkMode(true);
+  // };
+
   return (
-    <Navbar className="navbar" bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">Gift-experience</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/category/relax">Relax</NavDropdown.Item>
-              <NavDropdown.Item href="/category/extremo-aereo">
-                Aereo extremo
-              </NavDropdown.Item>
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Gift-experience</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link>
+                <Link to="/">Home</Link>
+              </Nav.Link>
 
-              <NavDropdown.Item href="/category/cultura">
-                Cultural
-              </NavDropdown.Item>
+              <NavDropdown title="Categorias" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link to="/category/relax">Relax</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/category/extremo-aereo">Aereo extremo</Link>
+                </NavDropdown.Item>
 
-              <NavDropdown.Item href="/category/barGourmet">
-                Gastronomia & bares
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        <Nav className="me-auto">
-          <CardWidget />
-        </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+                <NavDropdown.Item >
+                  <Link to="/category/cultura"> Cultural</Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item >
+                  <Link to="/category/barGourmet"> Gastronomia & bares</Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav>
+              <Nav.Link href="#deets"></Nav.Link>
+              <Nav.Link eventKey={2} /* href="#memes" */>
+                <CardWidget />
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 };
-
 export default Navbarr;

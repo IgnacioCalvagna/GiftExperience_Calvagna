@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "./itemDetail.css";
 import ItemCount from "../../common/ItemCount/ItemCount";
 import Swal from "sweetalert";
+import {cartContext} from '../../contexts/CartProvider'
+import { useContext } from "react";
 // import CarouselDetails from "../CarouselDetails/CarouselDetails";
 const ItemDetail = ({ product }) => {
-  const [cant, setCant] = useState(1);
-  const [tot, setTot] = useState(0);
+  
+  const {addToCart} = useContext(cartContext)
+  
+const precio = product.price 
 
 
-  const onAdd = () => {
-    Swal(
-      `Item agregado al carrito:  ${product.producto} \nCantidad: ${cant}\nTotal $${tot}`
-    );
+  const onAdd = (cant) => {
+
+
+    addToCart(product,cant)
+    const produ = {product: product,cant:cant}
+    localStorage.setItem("carrito",[produ] ); 
+    Swal(`Item agregado al carrito:  ${product.producto} por un valor de $ ${precio*cant} `,'success');
   };
+
+  
 
   return (
     <>
@@ -32,10 +41,6 @@ const ItemDetail = ({ product }) => {
               item={product}
               stock={product.stock}
               initial={1}
-              cant={cant}
-              setCant={setCant}
-              tot={tot}
-              setTot={setTot}
               onAdd={onAdd}
             />
           </div>

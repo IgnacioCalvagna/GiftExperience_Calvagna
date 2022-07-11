@@ -14,6 +14,7 @@
       "categoria": "relax"
     },
     {
+
       "id": 1,
       "producto": "Salto en paracaidas",
       "desc": "A 40 Km de capital federal en la ciudad de lobos  podes vivir una experiencia unica desde el aire.Salto tandem en paracaídas. Caída desde 3000 metros aproximadamente, con instructor y todos los complementos de seguridad necesarios. Video y fotos handycam. ",
@@ -28,7 +29,7 @@
     {
       "id": 2,
       "producto": "Recorrido Museos",
-      "desc": "Te invitamos a hacer este recorrido por puntos hist ",
+      "desc": "Te invitamos a hacer este recorrido guiado por puntos historicos de tigre y conocer un poco mas de nuestra historia. ",
       "price": 10000,
       "stock": 5,
       "img": [
@@ -73,7 +74,7 @@
     {
       "id": 6,
       "producto": "Vuelo de bautismo",
-      "desc": "Te invitamos a sobrevolar capital federal diurno/nocturno ",
+      "desc": "Te invitamos a sobrevolar Ushuaia y sus alrrededores  diurno/nocturno ",
       "price": 8000,
       "stock": 150,
       "img": [

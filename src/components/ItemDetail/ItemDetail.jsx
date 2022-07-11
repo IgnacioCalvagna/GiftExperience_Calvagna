@@ -9,6 +9,8 @@ const ItemDetail = ({ product }) => {
   
   const {addToCart} = useContext(cartContext)
   
+  // const [cant,setCant] = useState(0)
+
 const precio = product.price 
 
 

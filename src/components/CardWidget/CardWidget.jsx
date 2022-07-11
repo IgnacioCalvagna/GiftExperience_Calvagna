@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useContext, useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-
-import { useContext } from "react";
-import { cartContext } from "../../contexts/CartProvider";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../contexts/CartProvider";
+import './cartWidget.css';
 // import ItemCount from "../../common/ItemCount/ItemCount";
 
 const CardWidget = () => {
@@ -33,14 +32,19 @@ const CardWidget = () => {
     );
   });
 
-  console.log("TOT CANT ----->",totCant)
+  
 
   return (
     <div>
-      <div>
+      <div className="elCart">
         <FontAwesomeIcon onClick={handleShow} icon={faCartShopping} />
-        {/* <p> {cantProdInCart}</p> */}
+
+        <button className='btn btnCount ' disabled> {totCant} </button>
       </div>
+
+
+
+
 
       {show && (
         <Offcanvas show={show} onHide={handleClose} placement="end">

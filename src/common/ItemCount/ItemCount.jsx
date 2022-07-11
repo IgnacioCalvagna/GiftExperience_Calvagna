@@ -5,6 +5,7 @@ import Swal from "sweetalert";
 import "./itemCount.css";
 
 const ItemCount = ({ item, stock, initial, onAdd }) => {
+  
   const [cant, setCant] = useState(initial);
   
 

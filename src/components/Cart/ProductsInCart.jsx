@@ -1,21 +1,21 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {   faTrashCan } from "@fortawesome/free-solid-svg-icons";
-
+// import Modal from 'react-bootstrap'
 import { useContext } from "react";
 import { Table } from "react-bootstrap";
 import { cartContext } from "../../contexts/CartProvider";
 
 const ProductsInCart = () => {
-  const { cartProducts, clear,removeItem } = useContext(cartContext);
+  const { cartProducts, removeItem,totCant,totPrecio } = useContext(cartContext);
 
-  // const [total, setTotal] = useState(0);
+console.log("TOT CANT ------->",totCant)
 
   const prodCarrito = cartProducts.map((p, i) => {
     return (
       <tr key={i} style={{verticalAlign:"middle"}}>
         <td>
-          <img src={p.img} width={"50%"} alt="" objetcfit="contain" />
+          <img src={p.img} width={"50%"} height={"100"} alt="" objetcfit="contain" />
         </td>
         <td>{p.producto}</td>
         <td>{p.quentity}</td>
@@ -45,10 +45,8 @@ const ProductsInCart = () => {
         </thead>
         <tbody>{prodCarrito}</tbody>
       </Table>
-      <div>
-      {/* <button onClick={()=>clear} className="btn btn-warning">
-              Limpiar carrito
-            </button> */}
+      <div style={{float:"right"}}>
+          <h2>Total ${totPrecio} </h2>
       </div>
       
     </div>

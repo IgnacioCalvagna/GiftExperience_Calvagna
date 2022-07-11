@@ -1,0 +1,11 @@
+.elCart{
+    display:flex;
+    align-items:center;
+    vertical-align:middle;
+    
+}
+.btnCount{
+    
+    color: #e8e8e9;
+    
+}

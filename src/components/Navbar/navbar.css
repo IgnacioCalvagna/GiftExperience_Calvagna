@@ -3,4 +3,10 @@
     /* display: flex; */
     color: rgb(206, 203, 203);
     text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+.Nav.Link{
+    text-decoration: none;
+    list-style: none;
 }

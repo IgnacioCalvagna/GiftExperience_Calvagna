@@ -42,8 +42,8 @@ const Navbarr = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets"></Nav.Link>
-              <Nav.Link eventKey={2} /* href="#memes" */>
+              
+              <Nav.Link >
                 <CardWidget />
               </Nav.Link>
             </Nav>

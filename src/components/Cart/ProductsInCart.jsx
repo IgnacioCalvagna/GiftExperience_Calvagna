@@ -15,11 +15,11 @@ console.log("TOT CANT ------->",totCant)
     return (
       <tr key={i} style={{verticalAlign:"middle"}}>
         <td>
-          <img src={p.img} width={"50%"} height={"100"} alt="" objetcfit="contain" />
+          <img src={p.imagenes} width={"50%"} height={"100"} alt="" objetcfit="contain" />
         </td>
         <td>{p.producto}</td>
         <td>{p.quentity}</td>
-        <td>${p.price}</td>
+        <td>${p.precio}</td>
         <td>${p.total}</td>
         <td>
          <button className='btn btn-danger' onClick={()=>removeItem(p.id)} > <FontAwesomeIcon icon={faTrashCan} /></button>
@@ -27,6 +27,9 @@ console.log("TOT CANT ------->",totCant)
       </tr>
     );
   });
+
+
+  
 
   return (
     <div className="container">
@@ -40,6 +43,7 @@ console.log("TOT CANT ------->",totCant)
             <th>Cantidad</th>
             <th>Precio unitario</th>
             <th>Sub total</th>
+            <th>action</th>
             <th></th>
           </tr>
         </thead>

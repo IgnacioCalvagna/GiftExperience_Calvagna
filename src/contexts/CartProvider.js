@@ -12,13 +12,13 @@ const CartProvider = ({ children }) => {
     const prodAux = {
       id: item.id,
       producto: item.producto,
-      desc: item.desc,
-      price: item.price,
+      descripcion: item.descripcion,
+      precio: item.precio,
       stock: item.stock,
-      img: item.img,
+      imagenes: item.imagenes,
       categoria: item.categoria,
       quentity: quentity,
-      total: quentity * item.price,
+      total: quentity * item.precio,
     };
 
     const itsInCart = cartProducts.find((miItem) => miItem.id === item.id);
@@ -43,24 +43,21 @@ const CartProvider = ({ children }) => {
     setTotPrecio(totPrecio + prodAux.total);
   };
 
-  const cantProdInCart = () => {
-    cartProducts.forEach((p) => {});
-  };
-  // const itInCart = (prod) => {
-  //   const miProducto = cartProducts.find((miItem) => miItem.id === prod.id);
-  //   if (miProducto !== undefined) setEsta(true);
-  //   return esta;
-  // };
+
 
   const removeItem = (itemId) => {
+    const element = cartProducts.find(prod =>prod.id === itemId);
     const newArr = cartProducts.filter((prod) => prod.id !== itemId);
     
     setCartProducts(newArr);
-    // setTotCant()
+    let newQuentity =totCant
+    setTotCant(newQuentity  -= element.quentity)
   };
 
   const clear = () => {
     setCartProducts([]);
+    setTotCant(0)
+
   };
 
   return (
@@ -70,7 +67,7 @@ const CartProvider = ({ children }) => {
         addToCart,
         clear,
         removeItem,
-        cantProdInCart,
+        
         totCant,
         totPrecio,
       }}

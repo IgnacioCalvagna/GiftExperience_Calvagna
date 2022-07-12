@@ -29,7 +29,7 @@
     {
       "id": 2,
       "producto": "Recorrido Museos",
-      "desc": "Te invitamos a hacer este recorrido guiado por puntos historicos de tigre y conocer un poco mas de nuestra historia. ",
+      "desc": "Te invitamos a hacer este recorrido guiado por puntos historicos de tigre y conocer un poco mas de nuestra historia. incluye museo de la reconquista y MAT + recorrido turistico de Bus Turismo.",
       "price": 10000,
       "stock": 5,
       "img": [
@@ -41,7 +41,7 @@
     {
       "id": 3,
       "producto": "Recorrido de Bares",
-      "desc": "Veni a pasar una noche recorriendo los mejores bares ",
+      "desc": "Veni a pasar una noche recoriendo los mejores bares de capital para vos y 5 amigos.Visita 8 bares de excelencia y gran nivel de cocteleria  ",
       "price": 50000,
       "stock": 50,
       "img": [
@@ -74,7 +74,7 @@
     {
       "id": 6,
       "producto": "Vuelo de bautismo",
-      "desc": "Te invitamos a sobrevolar Ushuaia y sus alrrededores  diurno/nocturno ",
+      "desc": "Te invitamos a vivir la experiencia  sobrevolar Ushuaia y sus alrrededores + certificado de primer vuelo.",
       "price": 8000,
       "stock": 150,
       "img": [
@@ -84,7 +84,7 @@
     },
     {
       "id": 7,
-      "producto": "Dia all access parque de la costa ",
+      "producto": "Dia all access parque de la costa. ",
       "desc": "Podes vivir la experiencia de recorrer el parque de la costa con acceso a TODAS las atracciones, Acuafun",
       "price": 8000,
       "stock": 150,

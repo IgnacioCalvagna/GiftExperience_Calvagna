@@ -11,7 +11,7 @@ const ItemDetail = ({ product }) => {
   
   // const [cant,setCant] = useState(0)
 
-const precio = product.price 
+const precio = product.precio 
 
 
   const onAdd = (cant) => {
@@ -30,13 +30,14 @@ const precio = product.price
       <div className="container itemDetail">
         <div className="miImg">
           <h1>{product.producto}</h1>
-          <img src={product.img[0]} width={"100%"} alt="" />
+          <p>Categoria: {product.categoria}</p>
+          <img src={product.imagenes[0]} width={"100%"} alt="" />
         </div>
 
         <div className="descProd">
-          <p>{product.desc}</p>
+          <p className='laDesc'>{product.descripcion}</p>
 
-          <p>$ {product.price}</p>
+          <p>$ {product.precio}</p>
 
           <div className="count">
             <ItemCount

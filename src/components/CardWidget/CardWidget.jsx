@@ -14,13 +14,14 @@ const CardWidget = () => {
   const handleShow = () => setShow(true);
 
   const productosDelCarrito = cartProducts.map((p, i) => {
+    
     return (
       <div key={i}>
         <p>
           {" "}
           <strong> Producto :</strong> {p.producto}
         </p>
-        <img src={p?.img[0]} width="100%" alt="dasdasd" />
+        <img src={p?.imagenes[0]} width="100%" alt="dasdasd" />
         <p> cantidad : {p.quentity}</p>
 
         <button className="btn btn-danger" onClick={() => removeItem(p.id)}>

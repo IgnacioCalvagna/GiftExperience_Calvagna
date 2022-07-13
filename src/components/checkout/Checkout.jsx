@@ -4,9 +4,11 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import useInput from "../../hook/useInput";
 import { cartContext } from "../../contexts/CartProvider";
 import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
-  const { cartProducts, totPrecio } = useContext(cartContext);
+    const navigate = useNavigate()
+  const { cartProducts, totPrecio,clear } = useContext(cartContext);
   const db = getFirestore();
 
     const compras = collection(db, "compras");
@@ -14,27 +16,32 @@ const Checkout = () => {
   const nombre = useInput("");
   const apellido = useInput("");
   const email = useInput("");
+  const telefono=useInput("");
   const direccion = useInput("");
   const localidad = useInput("");
   const provincia = useInput("");
-  const codigoPostal = useInput(0);
+  const codigoPostal = useInput("");
 
+  const date = new Date();
 
   const handleVerificarCompra = (e) => {
     e.preventDefault();
-
+    
     const pedido = {
       nombre:nombre.value,
       apellido:apellido.value,
       email:email.value,
+      telefono:telefono.value,
       provincia:provincia.value,
       cartProducts,
       totPrecio:totPrecio,
+      date:date
     };
    
     addDoc(compras,pedido)
-    .then(({id})=>   Swal.fire('Hey user!', `Compra realizada! Nº de orden ${id}`, 'success'))
-    
+    .then(({id})=>   Swal.fire('Hey user!', `Compra realizada! Nº de orden ${id}\n Por un total de $ ${pedido.totPrecio} \nFecha de compra : ${pedido.date}`, 'success'))
+    .then(()=>clear())
+    .then(()=> navigate('/'))
 }
 
 
@@ -66,8 +73,8 @@ const Checkout = () => {
             />
           </Form.Group>
         </Row>
-
-        <Form.Group className="mb-3" controlId="formGridEmail">
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridNombre">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
@@ -75,7 +82,19 @@ const Checkout = () => {
             {...email}
             required
           />
-        </Form.Group>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridApellido">
+            <Form.Label>Telefono</Form.Label>
+            <Form.Control
+              type="tel"
+              placeholder="Ingrese su numero telefonico"
+              {...telefono}
+              required
+            />
+          </Form.Group>
+        </Row>
+       
 
         <Form.Group className="mb-3" controlId="formGridDireccion">
           <Form.Label>Direccion </Form.Label>

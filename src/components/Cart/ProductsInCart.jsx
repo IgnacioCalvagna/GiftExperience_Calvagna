@@ -5,6 +5,7 @@ import {   faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { Table } from "react-bootstrap";
 import { cartContext } from "../../contexts/CartProvider";
+import { Link } from "react-router-dom";
 
 const ProductsInCart = () => {
   const { cartProducts, removeItem,totCant,totPrecio } = useContext(cartContext);
@@ -52,7 +53,7 @@ console.log("TOT CANT ------->",totCant)
       <div style={{float:"right"}}>
           <h2>Total ${totPrecio} </h2>
       </div>
-      
+      <Link to='/checkout'> <button>Continuar con la compra </button></Link>
     </div>
   );
 };

@@ -41,6 +41,7 @@ const CartProvider = ({ children }) => {
     }
     setTotCant(totCant + prodAux.quentity);
     setTotPrecio(totPrecio + prodAux.total);
+    
   };
 
 
@@ -52,6 +53,8 @@ const CartProvider = ({ children }) => {
     setCartProducts(newArr);
     let newQuentity =totCant
     setTotCant(newQuentity  -= element.quentity)
+    
+
   };
 
   const clear = () => {

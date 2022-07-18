@@ -2,6 +2,8 @@
 import { createContext, useState } from "react";
 export const cartContext = createContext(null);
 
+
+
 const CartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
 
@@ -43,8 +45,6 @@ const CartProvider = ({ children }) => {
     setTotPrecio(totPrecio + prodAux.total);
     
   };
-
-
 
   const removeItem = (itemId) => {
     const element = cartProducts.find(prod =>prod.id === itemId);

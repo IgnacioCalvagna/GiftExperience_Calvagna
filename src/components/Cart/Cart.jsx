@@ -10,7 +10,7 @@ const Cart = () => {
     const { cartProducts} = useContext(cartContext);
 
 
-console.log(cartProducts)
+
 
   return (
     <>

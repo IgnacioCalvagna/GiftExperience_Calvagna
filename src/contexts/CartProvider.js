@@ -77,8 +77,7 @@ const CartProvider = ({ children }) => {
         clear,
         removeItem,
         cantProdCart: cartProducts.reduce((prev,current)=>prev+current.quentity,0),
-        totCant,
-        totPrecio,
+        totPrecio: cartProducts.reduce((prev,current)=>prev+current.total,0),
       }}
     >
       {children}

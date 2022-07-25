@@ -12,7 +12,7 @@ const CartProvider = ({ children }) => {
       console.log(err);
     }
   });
-  const [totCant, setTotCant] = useState(0);
+  
   const [totPrecio, setTotPrecio] = useState(0);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const CartProvider = ({ children }) => {
 
   const clear = () => {
     setCartProducts([]);
-    setTotCant(0);
+    
   };
 
   return (
@@ -77,8 +77,7 @@ const CartProvider = ({ children }) => {
         clear,
         removeItem,
         cantProdCart: cartProducts.reduce((prev,current)=>prev+current.quentity,0),
-        totCant,
-        totPrecio,
+        totPrecio: cartProducts.reduce((prev,current)=>prev+current.total,0),
       }}
     >
       {children}

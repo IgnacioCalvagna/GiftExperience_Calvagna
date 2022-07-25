@@ -51,8 +51,8 @@ const CartProvider = ({ children }) => {
     } else {
       setCartProducts([...cartProducts, prodAux]);
     }
-    // setTotCant(totCant + prodAux.quentity);
-    setTotPrecio(totPrecio + prodAux.total);
+    
+    setTotPrecio(Number(totPrecio + prodAux.total));
   };
 
   const removeItem = (itemId) => {
@@ -60,8 +60,7 @@ const CartProvider = ({ children }) => {
     const newArr = cartProducts.filter((prod) => prod.id !== itemId);
 
     setCartProducts(newArr);
-    // let newQuentity = totCant;
-    // setTotCant((newQuentity -= element.quentity));
+    
     setTotPrecio(totPrecio - element.total);
   };
 
@@ -77,7 +76,7 @@ const CartProvider = ({ children }) => {
         addToCart,
         clear,
         removeItem,
-        cantProdCart: cartProducts.reduce((prev,current)=>prev+current.quentity),
+        cantProdCart: cartProducts.reduce((prev,current)=>prev+current.quentity,0),
         totCant,
         totPrecio,
       }}

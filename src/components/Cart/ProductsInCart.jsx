@@ -8,9 +8,9 @@ import { cartContext } from "../../contexts/CartProvider";
 import { Link } from "react-router-dom";
 
 const ProductsInCart = () => {
-  const { cartProducts, removeItem,totCant,totPrecio } = useContext(cartContext);
+  const { cartProducts, removeItem,totPrecio } = useContext(cartContext);
 
-console.log("TOT CANT ------->",totCant)
+
 
   const prodCarrito = cartProducts.map((p, i) => {
     return (
@@ -53,7 +53,7 @@ console.log("TOT CANT ------->",totCant)
       <div style={{float:"right"}}>
           <h2>Total ${totPrecio} </h2>
       </div>
-      <Link to='/checkout'> <button>Continuar con la compra </button></Link>
+      <Link to='/checkout'> <button className='btn btn-success'>comprar </button></Link>
     </div>
   );
 };

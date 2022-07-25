@@ -24,9 +24,18 @@ const Checkout = () => {
 
   const date = new Date();
 
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+
   const handleVerificarCompra = (e) => {
     e.preventDefault();
-    
+   
     const pedido = {
       nombre:nombre.value,
       apellido:apellido.value,
@@ -38,6 +47,12 @@ const Checkout = () => {
       date:date
     };
    
+    if(!validateEmail(pedido.email)) return (Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Ingresa un formato de email correcto!',
+    }))
+
     addDoc(compras,pedido)
     .then(({id})=>   Swal.fire('Hey user!', `Compra realizada! Nº de orden ${id}\n Por un total de $ ${pedido.totPrecio} \nFecha de compra : ${pedido.date}`, 'success'))
     .then(()=>clear())

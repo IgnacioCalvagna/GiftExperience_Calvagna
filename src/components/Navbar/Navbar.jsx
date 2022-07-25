@@ -1,4 +1,4 @@
-import React /* , { useContext } */ from "react";
+import React  from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import "./navbar.css";
 import CardWidget from "../CardWidget/CardWidget";
@@ -14,11 +14,11 @@ const Navbarr = () => {
 
   return (
     <>
-      <Navbar className='navbar'collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar className='navbar' expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand><Link to="/">Gift-experience</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto">
               <Nav.Link>
                 <Link to="/">Home</Link>
@@ -43,7 +43,7 @@ const Navbarr = () => {
             </Nav>
             <Nav>
               
-              <Nav.Link >
+              <Nav.Link>
                 <CardWidget />
               </Nav.Link>
             </Nav>

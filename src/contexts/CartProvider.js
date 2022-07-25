@@ -1,14 +1,24 @@
-//@ts-check
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 export const cartContext = createContext(null);
 
-
-
 const CartProvider = ({ children }) => {
-  const [cartProducts, setCartProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState(() => {
+    const prodStorage = localStorage.getItem("carrito");
 
+    try {
+      return prodStorage ? JSON.parse(prodStorage) : [];
+      
+    } catch (err) {
+      console.log(err);
+    }
+  });
   const [totCant, setTotCant] = useState(0);
   const [totPrecio, setTotPrecio] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(cartProducts));
+  }, [cartProducts]);
+
 
   const addToCart = (item, quentity) => {
     const prodAux = {
@@ -41,26 +51,23 @@ const CartProvider = ({ children }) => {
     } else {
       setCartProducts([...cartProducts, prodAux]);
     }
-    setTotCant(totCant + prodAux.quentity);
+    // setTotCant(totCant + prodAux.quentity);
     setTotPrecio(totPrecio + prodAux.total);
-    
   };
 
   const removeItem = (itemId) => {
-    const element = cartProducts.find(prod =>prod.id === itemId);
+    const element = cartProducts.find((prod) => prod.id === itemId);
     const newArr = cartProducts.filter((prod) => prod.id !== itemId);
-    
-    setCartProducts(newArr);
-    let newQuentity =totCant
-    setTotCant(newQuentity  -= element.quentity)
-    
 
+    setCartProducts(newArr);
+    // let newQuentity = totCant;
+    // setTotCant((newQuentity -= element.quentity));
+    setTotPrecio(totPrecio - element.total);
   };
 
   const clear = () => {
     setCartProducts([]);
-    setTotCant(0)
-
+    setTotCant(0);
   };
 
   return (
@@ -70,12 +77,13 @@ const CartProvider = ({ children }) => {
         addToCart,
         clear,
         removeItem,
-        
+        cantProdCart: cartProducts.reduce((prev,current)=>prev+current.quentity),
         totCant,
         totPrecio,
       }}
     >
       {children}
+
     </cartContext.Provider>
   );
 };

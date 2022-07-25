@@ -8,13 +8,12 @@ import './cartWidget.css';
 // import ItemCount from "../../common/ItemCount/ItemCount";
 
 const CardWidget = () => {
-  const { cartProducts, clear, removeItem, totCant } = useContext(cartContext);
+  const { cartProducts, clear, removeItem, totCant,cantProdCart } = useContext(cartContext);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   const productosDelCarrito = cartProducts.map((p, i) => {
-    
     return (
       <div key={i}>
         <p>
@@ -36,11 +35,12 @@ const CardWidget = () => {
   
 
   return (
-    <div>
+    
+    <div >
       <div className="elCart">
         <FontAwesomeIcon onClick={handleShow} icon={faCartShopping} />
 
-        <button className='btn btnCount ' disabled> {totCant} </button>
+        <button className='btn btnCount ' disabled> <span> {cantProdCart}</span> </button>
       </div>
 
 
@@ -48,8 +48,8 @@ const CardWidget = () => {
 
 
       {show && (
-        <Offcanvas show={show} onHide={handleClose} placement="end">
-          <Offcanvas.Header closeButton>
+        <Offcanvas show={show}  placement="end">
+          <Offcanvas.Header closeButton onClick={handleClose} >
             <Offcanvas.Title>Carrito </Offcanvas.Title>
           </Offcanvas.Header>
 
@@ -61,7 +61,7 @@ const CardWidget = () => {
               Limpiar carrito
             </button>
             <Link to='/cart'>
-            <button className="btn btn-warning">Finalizar compra</button>
+            <button onClick={handleClose} className="btn btn-warning">Finalizar compra</button>
             </Link>
           </Offcanvas.Body>
         </Offcanvas>

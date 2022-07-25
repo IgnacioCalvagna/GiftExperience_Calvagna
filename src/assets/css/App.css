@@ -1,5 +1,6 @@
 .App {
-  
+  text-decoration: none;
+  list-style: none;
   /* background-color: #282c34; */
   background-color: #e8e8e9;
   color: black;
